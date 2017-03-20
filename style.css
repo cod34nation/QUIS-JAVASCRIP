@@ -1,0 +1,33 @@
+
+body {
+  margin: 0;
+  font-family:calibri ;
+
+}
+input[type="button"], input[type="text"] {
+  width: 180px;
+  height: 50px;
+  border: none;
+
+}
+#inama{
+  color: #FFFFFF;
+  font-style: arial black
+
+}
+#iscore{
+  color:#ff3d00;
+  font-style: arial black
+
+}
+
+#iwaktu{
+  color: #ffeb3b;
+}
+
+input[type="button"], input[type="text"],input[type="radio"] {
+  width: 175px;
+  height: 30px;
+  border: none;
+
+}
