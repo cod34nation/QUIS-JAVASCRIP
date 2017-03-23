@@ -7,6 +7,7 @@ body {
 input[type="button"], input[type="text"] {
   width: 180px;
   height: 50px;
+  text-align: center;
   border: none;
 
 }
@@ -24,10 +25,12 @@ input[type="button"], input[type="text"] {
 #iwaktu{
   color: #ffeb3b;
 }
-
-input[type="button"], input[type="text"],input[type="radio"] {
-  width: 175px;
-  height: 30px;
-  border: none;
-
+#opsi{
+text-align: center;
+width: 90px;
+height: 30px
+}
+#jj{
+  font-family: sans-serif;
+  font-size: 100px;
 }

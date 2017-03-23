@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MAQIZ</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -46,10 +46,10 @@
     <script>
     // Variabel Utama
     var judul = "<font size=6>{MAQIZ}</font><br>"
-    var sub_code = "<font size=2> >>MATH QUIZ<< </font><br><br><br>"
+    var sub_code = "<font class=jj size=2> >>MATH QUIZ<< </font><br><br><br>"
     var nama = "";
     var score = 0;
-    var waktu_soal = 20;
+    var waktu_soal = 100000;
     var text = "";
 
     var ar_hasil = 0;
@@ -147,8 +147,8 @@
     function menu_soal(x) {
       var soal = ["Penjumlahan", "Pengurangan", "Perkalian", "Pembagian"];
       var opr = [" + ", " - ", " x ", " / "];
-      var a = angka_acak(20); // angka acak dari 1 - 20
-      var b = angka_acak(20); // angka acak dari 1 - 20
+      var a = angka_acak(300); // angka acak dari 1 - 20
+      var b = angka_acak(300); // angka acak dari 1 - 20
 
       // Pada Pengurangan - jika b lebih besar dari a, maka nilai akan di tukar
       if(x == 1) {
@@ -174,8 +174,7 @@
         clearInterval(time); // Menghentikan Waktu
       }
       else {
-        text = 	judul + sub_code +
-            "<hr>" +
+        text =
             "<font size=4>Quis " + soal[x] + "</font><br>" +
             "<font size=2>( Soal " + ar_quis + " / " + ar_jml_quis + " )</font><br><br>" +
             a + opr[x] + b + " = ?<br><br>";
@@ -192,8 +191,7 @@
           else {
             text = 	judul + sub_code +
                   "<div class='row'>"+
-                  "</div><div class='col-md-3 col-md-offset-5'><div class='alert alert-danger' role='alert'><span class ='glyphicon glyphicon-remove' aria-hidden='true'> Waktu Habis </span></div>" + +
-                "<input type=button value='Lanjut >>' onclick=menu_soal(" + ar_soal + ")><br><br>" +
+                  "</div><div class='col-md-3 col-md-offset-5'><div class='alert alert-danger' role='alert'><span class ='glyphicon glyphicon-remove' aria-hidden='true'> Waktu Habis </span></div>" +
                 "<input type=button value='Menu Utama' onclick='reset_score(); reset(); menu_utama();'>";
             document.getElementById("scr").innerHTML = text;
             clearInterval(time); // Menghentikan Waktu
@@ -213,10 +211,10 @@
           jawab[i] = ar_hasil + i + 1;
         }
       }
-      text += "<input type=button class ='btn btn-success' value=" + jawab[0] + " onclick=cek_jawaban(" + jawab[0] + ")><br><br>" +
-          "<input type=button class ='btn btn-success'  value=" + jawab[1] + " onclick=cek_jawaban(" + jawab[1] + ")><br><br>" +
-          "<input type=button class ='btn btn-success' value=" + jawab[2] + " onclick=cek_jawaban(" + jawab[2] + ")><br><br>" +
-          "<input type=button class ='btn btn-success' value=" + jawab[3] + " onclick=cek_jawaban(" + jawab[3] + ")>";
+      text += "A :<input type=button class ='btn btn-success' id ='opsi'value="+ jawab[0] + " onclick=cek_jawaban(" + jawab[0] + ")><br><br>" +
+          "B : <input type=button class ='btn btn-success' id ='opsi' value=" + jawab[1] + " onclick=cek_jawaban(" + jawab[1] + ")><br><br>" +
+          "C :<input type=button class ='btn btn-success' id ='opsi' value=" + jawab[2] + " onclick=cek_jawaban(" + jawab[2] + ")><br><br>" +
+          "D :<input type=button class ='btn btn-success' id ='opsi' value=" + jawab[3] + " onclick=cek_jawaban(" + jawab[3] + ")>";
     }
 
   //====================================//
